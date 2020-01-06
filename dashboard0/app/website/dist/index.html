@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The HTML5 Herald</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/scripts.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <aside class="side-menu">
+    <header class="side-menu__header">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">ShapeRex</span>
+      </div>
+    </header>
+    <nav class="navbar d-flex flex-column flex-nowrap justify-content-between" >
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <span class="navbar-icon squares-icon"></span>
+          <a href="" class="navbar-link">Dashboard</a>
+        </li>
+        <li class="navbar-item">
+          <span class="navbar-icon task-icon"></span>
+          <a href="" class="navbar-link">My Task</a>
+        </li>
+        <li class="navbar-item">
+          <!-- <i class="fas fa-folder-open"></i> -->
+          <span class="navbar-icon folder-icon"></span>
+          <a href="" class="navbar-link">My Project</a>
+        </li>
+        <li class="navbar-item">
+          <!-- <i class="fas fa-wallet"></i> -->
+          <span class="navbar-icon wallet-icon"></span>
+          <a href="" class="navbar-link">My Wallet</a>
+        </li>
+        <li class="navbar-item">
+          <span class="navbar-icon history_data-icon"></span>
+          <a href="" class="navbar-link">History Data</a>
+        </li>
+        <li class="navbar-item">
+          <span class="navbar-icon invoice-icon"></span>
+          <a href="" class="navbar-link">Invoice</a>
+        </li>
+        <li class="navbar-item">
+          <span class="navbar-icon help-icon"></span>
+          <a href="" class="navbar-link">Helps</a>
+        </li>
+      </ul>
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <span class="navbar-icon exit-icon"></span>
+          <a href="" class="navbar-link">Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <header class="main-content__header">
+      <ul class="list-inline">
+        <li class="list__item">
+          <sub class="search-icon sub"></sub>
+          <sup class="sup"></sup>
+        </li>
+        <li class="list__item">
+          <sub class="envelope-icon"></sub>
+          <sup class="sup">24</sup>
+        </li>
+        <li class="list__item">
+          <sub class="bell-icon"></sub>
+          <sup class="sup">5</sup>
+        </li>
+        <li class="list__item list__item-image">
+          <img class="content user_icon" src="../img/icons/user_icon.png" alt="">
+        </li>
+      </ul>
+    </header>
+    <section class="main-content__content section">
+      <div class="row">
+        <article class="section__item">
+          <p class="section__header">My Credit Card</p>
+          <div class="card"></div>
+          <hr class="separator">
+          <ul>
+            <!-- Card number -->
+            <li>
+              <ul class="d-flex justify-content-between flex-wrap">
+                <li class="section__text">Card number:</li>
+                <li class="section__text-bold">2342 23424 23424</li>
+              </ul>
+            </li>
+            <!-- Account name -->
+            <li>
+              <ul class="d-flex justify-content-between flex-wrap">
+                <li class="section__text">Account Name:</li>
+                <li class="section__text-bold">Subash Chacra</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="d-flex justify-content-between flex-wrap">
+                <li class="section__text">Card status: </li>
+                <li class="section__text-bold">Active</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+        <article class="section__item">
+          <p class="section__header">Statistics</p>
+          <div class="wrapper">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+            <canvas id="statistics_chart" class="canvas" style="height: 15rem;"></canvas>
+            <script>
+            var ctx = document.getElementById('statistics_chart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jub', 'Jul', 'Aug', 'Sep', 'oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: '2018',
+                        data: [200, 150, 210, 230, 250, 230, 210, 190, 150, 140, 200, 280],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+          </div>
+        </article>
+      </div>
+      <div class="row">
+        <article class="section__item" >
+          <p class="section__header">Earning in Month</p>
+          <div class="chart"></div>
+          <hr>
+          <ul>
+            <li>
+              <ul class="d-flex justify-content-between flex-wrap">
+                <li class="section__text">Deposit:</li>
+                <li class="section__text-bold">$20 54 1 875 574</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="d-flex justify-content-between flex-wrap">
+                <li class="section__text">Expese:</li>
+                <li class="section__text-bold">$54 1 875 574</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="d-flex justify-content-between flex-wrap">
+                <li class="section__text">payable:</li>
+                <li class="section__text-bold">$805 875 574</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+        <article class="d-flex flex-wrap flex-column flex-wrap justify-content-between" >
+          <article class="section__item">
+            <p class="section__header">Montly Scale</p>
+            <div class="wrapper d-flex flex-wrap justify-content-between">
+              <div class="wrapper__item">
+                <p class="section__second_header">20 541</p>
+                <p class="section__second_text">Today income</p>
+              </div>
+              <div class="orange-bg rectangle wrapper__item">
+                <i class="fa fa-arrow-down rectangle__icon"></i>
+              </div>
+            </div>
+          </article>
+          <article class="section__item">
+            <p class="section__header">Yearly Scale</p>
+            <div class="wrapper d-flex flex-wrap justify-content-between">
+              <div class="wrapper__item">
+                <p class="section__second_header">20 54 125</p>
+                <p class="section__second_text">Today income</p>
+              </div>
+              <div class="green-bg rectangle wrapper__item">
+                <i class="fa fa-arrow-up rectangle__icon"></i>
+              </div>
+            </div>
+          </article>
+        </article>
+        <article class="section__item" >
+          <div class="section__header d-flex flex-wrap flex-row justify-content-between">
+            <div class="blue-bg rectangle section__header__item">
+              <i class="rectangle__icon fa fa-calendar"></i>
+            </div>
+            <div class="section__header__item">
+              <p>Calendar</p>
+              <p class="section__second_text">
+                March 26, 2018
+              </p>
+            </div>
+            <i class="section__icon-centered button fas fa-ellipsis-v"></i>
+          </div>
+          <div class="wrapper">
+            <div class="calendar slides">
+              <div class="calendar__wrapper"></div>
+              <!-- Next and previous buttons -->
+              <a class="prev button" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next button" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script>
+    let calendar = document.querySelector(".calendar__wrapper");
+    for(let i = 1; i < 32; i++){
+        let span = document.createElement("span");
+        span.className = "calendar__date";
+        span.style.textAlign = "center";
+        span.innerHTML = i;
+        calendar.append(span);
+    }
+  </script>
+</body>
+</html>
